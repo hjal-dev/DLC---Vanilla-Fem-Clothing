@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
+    <AssemblyName>DLC.FemaleClothes</AssemblyName>
+    <RootNamespace>DLC.FemaleClothes</RootNamespace>
+    <OutputPath>bin\$(Configuration)\$(ProjectName)\$(AssemblyName)\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SPTarkov.Server.Core" Version="4.0.2" />
+    <PackageReference Include="SPTarkov.Common"      Version="4.0.2" />
+    <PackageReference Include="SPTarkov.DI"          Version="4.0.2" />
+    <PackageReference Include="WTT-ServerCommonLib"  Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bundles.json"      CopyToOutputDirectory="Always" />
+    <None Include="db\**\*.*"         CopyToOutputDirectory="Always" />
+    <None Include="bundles\**\*.*"    CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+</Project>
