@@ -16,7 +16,7 @@ public sealed record ModMetadata : IModMetadata
     public string Author    { get; init; } = "WUVGAWORE + Hj";
     public string License   { get; init; } = "Proprietary";
     public string Url       { get; init; } = "";
-    public Semver Version    { get; init; } = new("1.0.1");
+    public Semver Version    { get; init; } = new("1.0.3");
     public Range  SptVersion { get; init; } = Range.Parse("~4.1.0");
     public List<string> Contributors      { get; init; } = new();
     public List<string> Incompatibilities { get; init; } = new();
