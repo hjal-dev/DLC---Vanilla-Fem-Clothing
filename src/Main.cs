@@ -9,12 +9,12 @@ using WTTServerCommonLib;
 
 namespace DLC.FemaleClothes;
 
-[Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 2)]
+[Injectable(TypePriority = OnLoadOrder.Preload + 2)]
 public sealed class FemaleClothes(
     WTTServerCommonLib.WTTServerCommonLib wtt
 ) : IOnLoad
 {
-    public async Task OnLoad()
+    public async Task OnLoadAsync(CancellationToken cancellationToken)
     {
         var assembly = Assembly.GetExecutingAssembly();
 

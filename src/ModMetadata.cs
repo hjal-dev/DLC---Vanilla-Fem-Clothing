@@ -9,20 +9,20 @@ using Semver = SemanticVersioning.Version;
 
 namespace DLC.FemaleClothes;
 
-public sealed record ModMetadata : AbstractModMetadata
+public sealed record ModMetadata : IModMetadata
 {
-    public override string ModGuid   { get; init; } = "dlc.femaleclothes";
-    public override string Name      { get; init; } = "DLC.FemaleClothes";
-    public override string Author    { get; init; } = "WUVGAWORE + Hj + potat";
-    public override string License   { get; init; } = "Proprietary";
-    public override string Url       { get; init; } = "";
-    public override bool? IsBundleMod { get; init; } = true;
-    public override Semver Version    { get; init; } = new("1.0.0");
-    public override Range  SptVersion { get; init; } = Range.Parse("~4.0.0");
-    public override List<string> Contributors      { get; init; } = new();
-    public override List<string> Incompatibilities { get; init; } = new();
-    public override Dictionary<string, Range> ModDependencies { get; init; } = new()
+    public string ModGuid   { get; init; } = "dlc.femaleclothes";
+    public string Name      { get; init; } = "DLC.FemaleClothes";
+    public string Author    { get; init; } = "WUVGAWORE + Hj";
+    public string License   { get; init; } = "Proprietary";
+    public string Url       { get; init; } = "";
+    public Semver Version    { get; init; } = new("1.0.1");
+    public Range  SptVersion { get; init; } = Range.Parse("~4.1.0");
+    public List<string> Contributors      { get; init; } = new();
+    public List<string> Incompatibilities { get; init; } = new();
+    public Dictionary<string, Range> ModDependencies { get; init; } = new()
     {
-        { "com.wtt.commonlib", Range.Parse("~2.0.0") }
+        { "com.wtt.commonlib", Range.Parse("~3.0.3") }
     };
+    public bool HasPrepatcher { get; init; } = false;
 }
